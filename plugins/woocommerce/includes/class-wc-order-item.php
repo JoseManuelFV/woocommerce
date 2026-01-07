@@ -672,7 +672,7 @@ class WC_Order_Item extends WC_Data implements ArrayAccess {
 	 * instead of arrays keyed by tax rate ID. This method attempts to infer the
 	 * appropriate tax rate ID from the order context.
 	 *
-	 * @since 10.5.0
+	 * @since 10.6.0
 	 *
 	 * @param float|string   $value The legacy scalar tax value.
 	 * @param WC_Order|false $order The order object, or false/null if unavailable.
@@ -699,11 +699,11 @@ class WC_Order_Item extends WC_Data implements ArrayAccess {
 		 * Allows plugins to customize how legacy scalar tax values are converted
 		 * to the expected array format.
 		 *
-		 * @since 10.5.0
+		 * @since 10.6.0
 		 *
 		 * @param array        $converted The converted tax data array.
 		 * @param float|string $value     The original legacy scalar value.
-			* @param WC_Order_Item $this  The order item being processed.
+		 * @param WC_Order_Item $item     The order item being processed.
 		 */
 		return apply_filters( 'woocommerce_order_item_legacy_tax_conversion', $converted, $value, $this );
 	}

@@ -131,7 +131,7 @@ class WC_Order_Item_Shipping extends WC_Order_Item {
 	 *
 	 * This is an array of tax ID keys with total amount values.
 	 *
-	 * @since 10.5.0 Handles legacy scalar tax values by converting to arrays.
+	 * @since 10.6.0 Handles legacy scalar tax values by converting to arrays.
 	 *
 	 * @param array $raw_tax_data Value to set.
 	 * @throws WC_Data_Exception May throw exception if data is invalid.

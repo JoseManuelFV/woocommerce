@@ -168,7 +168,7 @@ class WC_Order_Item_Product extends WC_Order_Item {
 	/**
 	 * Set line taxes and totals for passed in taxes.
 	 *
-	 * @since 10.5.0 Handles legacy scalar tax values by converting to arrays.
+	 * @since 10.6.0 Handles legacy scalar tax values by converting to arrays.
 	 * When legacy data is detected, attempts to infer tax rate ID from order context.
 	 *
 	 * @param array $raw_tax_data Raw tax data. 'total' and 'subtotal' should be arrays keyed by tax rate ID,
