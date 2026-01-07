@@ -245,11 +245,12 @@ class WC_Order_Item_Shipping_Test extends WC_Unit_Test_Case {
 		$item->set_order_id( $order->get_id() );
 
 		// Add a filter to customize the conversion.
-		$filter_callback = function ( $converted, $value, $order_item ) {
+		$filter_callback = function ( $converted, $value ) {
 			// Custom rate ID mapping.
+			unset( $converted );
 			return array( 999 => $value );
 		};
-		add_filter( 'woocommerce_order_item_legacy_tax_conversion', $filter_callback, 10, 3 );
+		add_filter( 'woocommerce_order_item_legacy_tax_conversion', $filter_callback, 10, 2 );
 
 		// Legacy tax data as float.
 		$legacy_tax_data = array(
